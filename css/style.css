@@ -1,0 +1,282 @@
+@charset "UTF-8";
+/* DEFINITIONS */ /* ANIMATIONS */
+/* Fade In from Bottom  */
+@-webkit-keyframes fadeInBottom {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(300px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+@keyframes fadeInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(300px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* .Fade In from Bottom  */
+/* MIXINS */ /* FUNCTIONS */
+/* STYLES */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Raleway";
+  color: #035E7B;
+}
+
+.container {
+  width: 70%;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Header  */
+header {
+  float: left;
+  width: 100%;
+  height: auto;
+  background-color: #035E7B;
+  padding: 30px 0px;
+}
+
+/* Nav */
+.nav-bar {
+  float: left;
+  width: 100%;
+  height: auto;
+}
+
+.nav-bar nav .logo {
+  float: left;
+  width: 75px;
+  height: 75px;
+  background-color: #fff;
+  border-radius: 50%;
+  margin-right: 60px;
+  text-align: center;
+}
+
+.nav-bar nav .logo img {
+  max-width: 50px;
+  padding-top: 5px;
+}
+
+.nav-bar nav ul {
+  padding-top: 30px;
+}
+
+.nav-bar nav ul li {
+  font-family: "Open Sans";
+  display: inline;
+  list-style: none;
+  margin-right: 15px;
+}
+
+.nav-bar nav ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav-bar nav ul li a:hover {
+  color: #E3E7AF;
+}
+
+/* Main */
+main {
+  float: left;
+  width: 100%;
+  padding-top: 30px;
+  background-color: #EEE;
+}
+
+/* Article */
+article {
+  float: left;
+  width: 95%;
+  padding: 30px 2.5%;
+  background-color: #fff;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  display: inline;
+  animation: fadeInBottom 0.5s;
+  -webkit-animation: fadeInBottom 0.5s;
+  -moz-animation: fadeInBottom 0.5s;
+  -o-animation: fadeInBottom 0.5s;
+  -ms-animation: fadeInBottom 0.5s;
+}
+
+article h2 {
+  float: left;
+  width: 100%;
+  font-family: "Open Sans";
+  margin-top: 15px;
+}
+
+article div.separator {
+  float: left;
+  width: 100%;
+  height: 15px;
+}
+
+article img {
+  max-width: 60%;
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 15px;
+}
+
+article p {
+  float: left;
+  width: 100%;
+  color: #515151;
+  margin-bottom: 15px;
+}
+
+article a.read-more {
+  float: left;
+  margin-top: 15px;
+  font-family: "Open Sans";
+  text-decoration: none;
+  padding: 5px;
+  border-radius: 4px;
+  color: #5167e1;
+  border: 1px solid #5167e1;
+}
+article a.read-more:before {
+  content: "👉";
+  margin-right: 2px;
+  display: inline-block;
+  transform: rotate(-45deg);
+}
+article a.read-more:hover {
+  color: #fff;
+  background-color: #5167e1;
+}
+article a.read-more:hover:before {
+  display: inline-block;
+  transform: rotate(0deg);
+}
+
+article p {
+  font-family: "Raleway";
+  font-size: 14px;
+  line-height: 26px;
+}
+
+article .opinion {
+  float: right;
+  margin-top: 20px;
+}
+
+article .opinion .like {
+  padding: 5px;
+  border: 1px solid #038a03;
+  text-align: center;
+  border-radius: 50%;
+  margin-right: 5px;
+  cursor: pointer;
+  opacity: 0.5;
+}
+article .opinion .like:hover {
+  background-color: #038a03;
+  opacity: 1;
+}
+
+article .opinion .dislike {
+  padding: 5px;
+  border: 1px solid #fd0606;
+  text-align: center;
+  border-radius: 50%;
+  margin-right: 5px;
+  cursor: pointer;
+  opacity: 0.5;
+}
+article .opinion .dislike:hover {
+  background-color: #fd0606;
+  opacity: 1;
+}
+
+article .time-to-read {
+  float: left;
+  width: 100%;
+  background-color: lightgray;
+  margin-bottom: 15px;
+}
+
+article .time-to-read span {
+  float: left;
+  width: 100%;
+  background-color: #7BCACE;
+  color: #fff;
+  font-size: 12px;
+  line-height: 18px;
+  padding-left: 15px;
+}
+article .time-to-read span.min-5 {
+  width: 20%;
+}
+article .time-to-read span.min-10 {
+  width: 10%;
+}
+article .time-to-read span.min-15 {
+  width: 6.6666666667%;
+}
+
+article div.date {
+  float: left;
+  width: auto;
+  color: #4c4c4c;
+  font-size: 12px;
+  font-style: italic;
+}
+
+article div.category-item {
+  float: left;
+  width: auto;
+  margin-right: 5px;
+  padding: 5px 5px;
+  background-color: #5167e1;
+  font-size: 12px;
+  border-radius: 4px;
+}
+
+article div.category-item a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Footer */
+footer {
+  float: left;
+  width: 100%;
+  margin-top: 30px;
+  text-align: center;
+}
+
+/* RESPONSIVE */
+@media only screen and (max-width: 1200px) {
+  .container {
+    width: 95%;
+    margin: 0 auto;
+    display: block;
+  }
+  article {
+    width: 95%;
+    padding: 30px 2.5%;
+    background-color: #fff;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

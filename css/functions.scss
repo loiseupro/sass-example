@@ -1,0 +1,6 @@
+
+/* FUNCTIONS */
+
+@function timeBar($num: 5%){
+  @return  100%/$num;
+}

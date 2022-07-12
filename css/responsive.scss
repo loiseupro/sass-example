@@ -1,0 +1,20 @@
+
+/* RESPONSIVE */
+
+@media only screen and (max-width: 1200px) {
+
+  .container{
+    width: 95%;
+    margin: 0 auto;
+    display: block;
+  }
+
+  article{
+    width: 95%;
+    padding: 30px 2.5%;
+    background-color: #fff;
+    margin-top: $default-margin-mobile;
+    margin-bottom: $default-margin-mobile;
+  }
+
+}

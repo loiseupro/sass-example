@@ -1,0 +1,26 @@
+
+/* ANIMATIONS */
+
+/* Fade In from Bottom  */
+@-webkit-keyframes fadeInBottom{
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(300px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+
+@keyframes fadeInBottom{
+  0% {
+    opacity: 0;
+    transform: translateY(300px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* .Fade In from Bottom  */

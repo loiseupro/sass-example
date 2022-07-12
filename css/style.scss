@@ -1,0 +1,231 @@
+
+@import 'definitions', 'animations', 'mixins', 'functions';
+
+/* STYLES */
+
+*{
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: $primary-font;
+  color: $primary-color;
+}
+
+.container{
+  width: 70%;
+  margin: 0 auto;
+  display: block;
+}
+
+
+/* Header  */
+header{
+  @include totalLeft;
+  height: auto;
+  background-color: $primary-background-color;
+  padding: 30px 0px;
+}
+
+
+/* Nav */
+.nav-bar{
+  float: left;
+  width: 100%;
+  height: auto;  
+}
+
+.nav-bar nav .logo{
+  float: left;
+  width: 75px;
+  height: 75px;
+  background-color: #fff;
+  border-radius: 50%;
+  margin-right: 60px;
+  text-align: center;  
+}
+
+.nav-bar nav .logo img{
+  max-width: 50px;
+  padding-top: 5px;
+}
+
+.nav-bar nav ul{
+  padding-top: 30px;
+}
+
+.nav-bar nav ul li{
+  font-family: $secondary-font;
+  display: inline;
+  list-style: none;
+  margin-right: $default-margin;
+}
+
+.nav-bar nav ul li a{  
+  text-decoration: none;
+  color: $link-color;
+}
+
+.nav-bar nav ul li a:hover{
+  color: $link-hover-color;
+}
+
+
+/* Main */
+main{
+  @include totalLeft;
+  padding-top: 30px;
+  background-color: $secondary-background-color;
+}
+
+
+/* Article */
+
+article{
+  float: left;
+  width: 95%;
+  padding: 30px 2.5%;
+  background-color: #fff;
+  margin-top: $default-margin;
+  margin-bottom: $default-margin;
+  @include fadeInBottom;
+}
+
+article h2{
+  @include totalLeft;
+  font-family: $secondary-font;
+  margin-top: $default_margin;
+}
+
+article div.separator{
+  @include totalLeft;
+  height: $default_margin;
+}
+
+article img{
+  max-width: 60%;
+  margin: 0 auto;
+  display: block;
+  margin-bottom: $default-margin;
+}
+
+article p{
+  @include totalLeft;
+  color: $text-color;
+  margin-bottom: $default-margin;
+}
+
+article a.read-more{
+  @include button;
+  color: $secondary-color;
+  border: 1px solid $secondary-color;
+  &:before{
+    content: '👉';
+    margin-right: 2px;
+    display: inline-block; 
+    transform: rotate(-45deg);
+  }
+
+  &:hover{
+    color: #fff;
+    background-color: $secondary-color; 
+
+    &:before{
+      display: inline-block;      
+      transform: rotate(0deg);
+    }
+
+  }
+
+}
+
+article p{
+  font-family: $primary-font;
+  font-size: 14px;
+  line-height: 26px;
+}
+
+article .opinion {
+  float: right;
+  margin-top: 20px;
+}
+
+article .opinion .like{
+  @include opinionCircle(#038a03);
+
+  &:hover{
+    @include opinionCircleActive(#038a03);
+  }
+
+}
+
+article .opinion .dislike{
+  @include opinionCircle(#fd0606);
+
+  &:hover{
+    @include opinionCircleActive(#fd0606);
+  }
+
+}
+
+article .time-to-read{
+  @include totalLeft;
+  background-color: lightgray;
+  margin-bottom: $default_margin;
+}
+
+article .time-to-read span{
+  @include totalLeft;
+  background-color: $bar-background-color;
+  color: #fff;
+  font-size: 12px;
+  line-height: 18px;
+  padding-left: $default_margin;
+
+  &.min-5{
+    width: timeBar(5);
+  }
+
+  &.min-10{
+   width: timeBar(10);
+  }
+
+  &.min-15{
+   width: timeBar(15);
+  }  
+
+}
+
+article div.date{
+  float: left;
+  width: auto;
+  color: $dark-color;
+  font-size: 12px;
+  font-style: italic;
+}
+
+article div.category-item{
+  float: left;
+  width: auto;
+  margin-right: 5px;
+  padding: 5px 5px;
+  background-color: $secondary-color;
+  font-size: 12px;
+  border-radius: 4px;
+}
+
+article div.category-item a{
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Footer */
+footer{
+  @include totalLeft;
+  margin-top: 30px;
+  text-align: center;
+}
+
+
+@import 'responsive';

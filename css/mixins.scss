@@ -1,0 +1,41 @@
+
+/* MIXINS */
+
+@mixin totalLeft{
+  float: left;
+  width: 100%;
+}
+
+@mixin button{
+  float: left;
+  margin-top: $default-margin;  
+  font-family: $secondary-font;
+  text-decoration: none;  
+  padding: 5px;
+  border-radius: 4px;
+}
+
+@mixin fadeInBottom{
+  display: inline;
+  animation: fadeInBottom 0.5s;
+  -webkit-animation: fadeInBottom 0.5s;
+  -moz-animation: fadeInBottom 0.5s;
+  -o-animation: fadeInBottom 0.5s;
+  -ms-animation: fadeInBottom 0.5s;
+}
+
+@mixin opinionCircle($color){
+  padding: 5px;
+  border: 1px solid $color;
+  text-align: center;
+  border-radius: 50%;
+  margin-right: 5px;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+@mixin opinionCircleActive($color){
+  background-color: $color;
+  opacity: 1;  
+}
+
